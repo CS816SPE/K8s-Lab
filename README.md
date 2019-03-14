@@ -11,7 +11,7 @@ We will be using **[Kubeadm-dind](https://github.com/kubernetes-sigs/kubeadm-din
 - Download the shell script which has the necessary code to download and spin up Kubernetes cluster
   `wget https://github.com/kubernetes-sigs/kubeadm-dind-cluster/releases/download/v0.1.0/dind-cluster-v1.13.sh`
 - Gves executable permission to the script `chmod +x dind-cluster-v1.13.sh`
-- Spin up the cluster `./dind-cluster-v1.13.sh up`
+- Spin up the cluster `sudo ./dind-cluster-v1.13.sh up`
 - Get used to the following K8s commands
   - `kubectl get pods`
   - `kubectl get pods --all-namespaces`
