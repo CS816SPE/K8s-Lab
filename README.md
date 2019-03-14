@@ -44,6 +44,8 @@ We will use WeaveScope on the cluster to get a visualisation of the cluster
 
 The weavescope dashboard should now be reachable at `echo $HOST_IP:$NODE_PORT`.
 
+For Mac users, run this command `kubectl -n weave port-forward deployment/weave-scope-app 4040:4040` in a new terminal and then you can access the dashboard at `localhost:4040`
+
 Play around the dashboard for a while and get used to it.
 
 ### Deploy an App on the cluster
@@ -60,6 +62,9 @@ Play around the dashboard for a while and get used to it.
    2. Get the IP of the node you chose by running `kubectl get nodes -o wide`
    3. Now, get the port of the app by running the command `kubectl get svc`. Pick the port on the right side of **':'** 
    4. Access the app using the IP and the port
+
+  
+  For Mac users, run this command `kubectl port-forward deployment/nginx-dep 8081:80` in a new terminal and then you can access the dashboard at `localhost:8081`
 
 4. Delete one of the instances from the WeaveScope dashboard and see what happens
 
