@@ -26,6 +26,9 @@ We will be using **[Kubeadm-dind](https://github.com/kubernetes-sigs/kubeadm-din
   - `kubectl get pods --all-namespaces`
   - `kubectl get nodes`
   - `kubectl get cs`
+  
+ If you are getting a *config permission denied* error at this step run the command `sudo chown $USER:$USER ~/.kube/config`
+ 
 
 ### Install WeaveScope
 
