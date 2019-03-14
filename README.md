@@ -12,6 +12,15 @@ We will be using **[Kubeadm-dind](https://github.com/kubernetes-sigs/kubeadm-din
   `wget https://github.com/kubernetes-sigs/kubeadm-dind-cluster/releases/download/v0.1.0/dind-cluster-v1.13.sh`
 - Gves executable permission to the script `chmod +x dind-cluster-v1.13.sh`
 - Spin up the cluster `sudo ./dind-cluster-v1.13.sh up`
+- Install `kubectl` (Only for Ubuntu users)
+  ```
+  sudo apt-get update && sudo apt-get install -y apt-transport-https
+  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+  echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+  sudo apt-get update
+  sudo apt-get install -y kubectl
+  ```
+
 - Get used to the following K8s commands
   - `kubectl get pods`
   - `kubectl get pods --all-namespaces`
